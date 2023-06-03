@@ -7,12 +7,12 @@ pretrained_model: ""
 load_only_params: false
 fp16_run: true
 
-train_data: "Data/train_list.txt"
-val_data: "Data/val_list.txt"
+train_data: "/content/stargan/Data/train_list.txt"
+val_data: "/content/stargan/Data/val_list.txt"
 
-F0_path: "Utils/JDC/bst.t7"
-ASR_config: "Utils/ASR/config.yml"
-ASR_path: "Utils/ASR/epoch_00100.pth"
+F0_path: "/content/stargan/Utils/JDC/bst.t7"
+ASR_config: "/content/stargan/Utils/ASR/config.yml"
+ASR_path: "/content/stargan/Utils/ASR/epoch_00100.pth"
 
 preprocess_params:
   sr: 24000
