@@ -141,9 +141,9 @@ def main(config_path):
 
 def get_data_path_list(train_path=None, val_path=None):
     if train_path is None:
-        train_path = "/content/stargan/Data/train_list.txt"
+        train_path = "/content/gdrive/MyDrive/Data/train_list.txt"
     if val_path is None:
-        val_path = "/content/stargan/Data/val_list.txt"
+        val_path = "/content/gdrive/MyDrive/Data/val_list.txt"
 
     with open(train_path, 'r') as f:
         train_list = f.readlines()
