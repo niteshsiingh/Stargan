@@ -7,8 +7,8 @@ pretrained_model: ""
 load_only_params: false
 fp16_run: true
 
-train_data: "/content/stargan/Data/train_list.txt"
-val_data: "/content/stargan/Data/val_list.txt"
+train_data: "/content/gdrive/MyDrive/Data/train_list.txt"
+val_data: "/content/gdrive/MyDrive/Data/val_list.txt"
 
 F0_path: "/content/stargan/Utils/JDC/bst.t7"
 ASR_config: "/content/stargan/Utils/ASR/config.yml"
