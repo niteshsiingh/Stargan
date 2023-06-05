@@ -1,5 +1,5 @@
 log_dir: "Models/VCTK20"
-save_freq: 2
+save_freq: 20
 device: "cuda"
 epochs: 150
 batch_size: 5
