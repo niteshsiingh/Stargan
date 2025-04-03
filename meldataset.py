@@ -98,6 +98,13 @@ class MelDataset(torch.utils.data.Dataset):
         label = int(label)
         wave, sr = sf.read(wave_path)
         wave_tensor = torch.from_numpy(wave).float()
+
+        if len(wave_tensor.shape) > 1 and wave_tensor.shape[1] == 2:
+            # Convert stereo to mono by averaging the channels
+            wave_tensor = torch.mean(wave_tensor, dim=1)
+        
+        # Make sure the tensor is 1D
+        wave_tensor = wave_tensor.squeeze()
         return wave_tensor, label
 
 class Collater(object):
