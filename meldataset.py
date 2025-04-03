@@ -39,11 +39,14 @@ class MelDataset(torch.utils.data.Dataset):
                  sr=24000,
                  validation=False,
                  ):
-        print(data_list)
+        # print(data_list)
         
 
         _data_list = [l[:-1].split('|') for l in data_list]
-        print(_data_list)
+        # print(_data_list)
+        for x in _data_list:
+            if "\ufeff" in x[0]:
+                x[0] = x[0].split("\ufeff")[-1]
         self.data_list = [(path, int(label)) for path, label in _data_list]
         self.data_list_per_class = {
             target: [(path, label) for path, label in self.data_list if label == target] \
