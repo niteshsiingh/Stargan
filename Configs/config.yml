@@ -7,12 +7,12 @@ pretrained_model: ""
 load_only_params: false
 fp16_run: true
 
-train_data: "/content/gdrive/MyDrive/Data/train.txt"
-val_data: "/content/gdrive/MyDrive/Data/val.txt"
+train_data: "/kaggle/input/dataset-for-stargan/Data/train.txt"
+val_data: "/kaggle/input/dataset-for-stargan/Data/val.txt"
 
-F0_path: "/content/stargan/Utils/JDC/bst.t7"
-ASR_config: "/content/stargan/Utils/ASR/config.yml"
-ASR_path: "/content/stargan/Utils/ASR/epoch_00100.pth"
+F0_path: "/kaggle/working/stargan/Utils/JDC/bst.t7"
+ASR_config: "/kaggle/working/stargan/Utils/ASR/config.yml"
+ASR_path: "/kaggle/working/stargan/Utils/ASR/epoch_00100.pth"
 
 preprocess_params:
   sr: 24000
