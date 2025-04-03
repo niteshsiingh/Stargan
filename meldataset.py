@@ -72,8 +72,8 @@ class MelDataset(torch.utils.data.Dataset):
         return mel_tensor, label, ref_mel_tensor, ref2_mel_tensor, ref_label
     
     def _load_data(self, path):
-        print(path)
         wave_tensor, label = self._load_tensor(path)
+        print(path, wave_tensor)
         
         if not self.validation: # random scale for robustness
             random_scale = 0.5 + 0.5 * np.random.random()
