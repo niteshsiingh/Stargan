@@ -8,7 +8,7 @@ load_only_params: false
 fp16_run: true
 
 train_data: "/kaggle/input/dataset-for-stargan/Data/train.txt"
-val_data: "/kaggle/input/dataset-for-stargan//Data/val.txt"
+val_data: "/kaggle/input/dataset-for-stargan/Data/val.txt"
 
 F0_path: "/kaggle/working/stargan/Utils/JDC/bst.t7"
 ASR_config: "/kaggle/working/stargan/Utils/ASR/config.yml"
