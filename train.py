@@ -80,7 +80,7 @@ def main(config_path):
             ASR_config = yaml.safe_load(f)
     ASR_model_config = ASR_config['model_params']
     ASR_model = ASRCNN(**ASR_model_config)
-    params = torch.load(ASR_path, map_location='cpu')['model']
+    params = torch.load(ASR_path, map_location='cpu', weights_only=False)['model']
     ASR_model.load_state_dict(params)
     _ = ASR_model.eval()
     
