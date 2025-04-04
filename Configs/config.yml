@@ -3,7 +3,7 @@ save_freq: 25
 device: "cuda"
 epochs: 150
 batch_size: 5
-pretrained_model: "/kaggle/working/Models/VCTK20/epoch_00125.pth"
+pretrained_model: "/kaggle/working/stargan/Models/VCTK20/epoch_00125.pth"
 load_only_params: false
 fp16_run: true
 
