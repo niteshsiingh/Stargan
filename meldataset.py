@@ -88,6 +88,8 @@ class MelDataset(torch.utils.data.Dataset):
         return mel_tensor, label
 
     def _preprocess(self, wave_tensor, ):
+        if wave_tensor.numel() == 0:
+            raise ValueError("Empty wave tensor provided for preprocessing")
         mel_tensor = self.to_melspec(wave_tensor)
         mel_tensor = (torch.log(1e-5 + mel_tensor) - self.mean) / self.std
         return mel_tensor
@@ -97,6 +99,9 @@ class MelDataset(torch.utils.data.Dataset):
         label = int(label)
         wave, sr = sf.read(wave_path)
         wave_tensor = torch.from_numpy(wave).float()
+
+        if len(wave) == 0:
+                raise ValueError(f"Empty audio file: {wave_path}")
 
         if len(wave_tensor.shape) > 1 and wave_tensor.shape[1] == 2:
             # Convert stereo to mono by averaging the channels
